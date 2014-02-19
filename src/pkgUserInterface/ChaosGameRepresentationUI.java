@@ -77,7 +77,7 @@ public class ChaosGameRepresentationUI extends javax.swing.JFrame {
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         setPreferredSize(new java.awt.Dimension(1280, 1024));
 
-        jPanel4.setBorder(javax.swing.BorderFactory.createTitledBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)), "Représentation"));
+        jPanel4.setBorder(javax.swing.BorderFactory.createTitledBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)), "Picture"));
 
         picturePanel1.setPreferredSize(new java.awt.Dimension(1024, 1024));
 
@@ -116,14 +116,14 @@ public class ChaosGameRepresentationUI extends javax.swing.JFrame {
             }
         });
 
-        jLabel2.setText("Séquence: aucune séquence chargée");
+        jLabel2.setText("Sequence: none");
         jLabel2.setMaximumSize(new java.awt.Dimension(200, 14));
 
-        jLabel3.setText("Rang : 1");
+        jLabel3.setText("Rank : 1");
 
-        jLabel4.setText("Correction: pas de correction");
+        jLabel4.setText("Correction: no correction");
 
-        jLabel5.setText("Taille: 0");
+        jLabel5.setText("Size: 0");
 
         javax.swing.GroupLayout jPanel3Layout = new javax.swing.GroupLayout(jPanel3);
         jPanel3.setLayout(jPanel3Layout);
@@ -136,7 +136,7 @@ public class ChaosGameRepresentationUI extends javax.swing.JFrame {
                     .addComponent(jLabel3)
                     .addComponent(jLabel4)
                     .addComponent(jLabel5))
-                .addContainerGap(93, Short.MAX_VALUE))
+                .addContainerGap(153, Short.MAX_VALUE))
         );
         jPanel3Layout.setVerticalGroup(
             jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -154,9 +154,9 @@ public class ChaosGameRepresentationUI extends javax.swing.JFrame {
 
         jScrollPane1.setViewportView(jPanel3);
 
-        jScrollPane2.setBorder(javax.swing.BorderFactory.createTitledBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)), "Option de couleur"));
+        jScrollPane2.setBorder(javax.swing.BorderFactory.createTitledBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)), "Color Options"));
 
-        jButton2.setText("Choix de la couleur");
+        jButton2.setText("Change Color");
         jButton2.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 jButton2ActionPerformed(evt);
@@ -174,9 +174,9 @@ public class ChaosGameRepresentationUI extends javax.swing.JFrame {
             .addGap(0, 252, Short.MAX_VALUE)
         );
 
-        jLabel6.setText("Fréquence max");
+        jLabel6.setText("max Frequency");
 
-        jLabel7.setText("Fréquence min");
+        jLabel7.setText("min Frequency");
 
         javax.swing.GroupLayout jPanel6Layout = new javax.swing.GroupLayout(jPanel6);
         jPanel6.setLayout(jPanel6Layout);
@@ -190,7 +190,7 @@ public class ChaosGameRepresentationUI extends javax.swing.JFrame {
                     .addComponent(jButton2)
                     .addComponent(jLabel6)
                     .addComponent(jLabel7))
-                .addContainerGap(88, Short.MAX_VALUE))
+                .addContainerGap(114, Short.MAX_VALUE))
         );
         jPanel6Layout.setVerticalGroup(
             jPanel6Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -209,7 +209,7 @@ public class ChaosGameRepresentationUI extends javax.swing.JFrame {
 
         jScrollPane2.setViewportView(jPanel6);
 
-        jScrollPane3.setBorder(javax.swing.BorderFactory.createTitledBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)), "Options d'affichage"));
+        jScrollPane3.setBorder(javax.swing.BorderFactory.createTitledBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)), "Display Options"));
 
         jSlider1.setMajorTickSpacing(1);
         jSlider1.setMaximum(10);
@@ -221,12 +221,14 @@ public class ChaosGameRepresentationUI extends javax.swing.JFrame {
         org.jdesktop.beansbinding.Binding binding = org.jdesktop.beansbinding.Bindings.createAutoBinding(org.jdesktop.beansbinding.AutoBinding.UpdateStrategy.READ_WRITE, jSlider1, org.jdesktop.beansbinding.ELProperty.create("${value}"), jTextField1, org.jdesktop.beansbinding.BeanProperty.create("text"));
         bindingGroup.addBinding(binding);
 
-        jLabel1.setText("Rang:");
+        jLabel1.setText("Rank:");
+        jLabel1.setToolTipText("");
 
-        jPanel2.setBorder(javax.swing.BorderFactory.createTitledBorder(javax.swing.BorderFactory.createEtchedBorder(), "Correction de Markov:"));
+        jPanel2.setBorder(javax.swing.BorderFactory.createTitledBorder(javax.swing.BorderFactory.createEtchedBorder(), "Markov chain bias correction:"));
 
         buttonGroup1.add(jRadioButton1);
-        jRadioButton1.setText("Pas de correction");
+        jRadioButton1.setSelected(true);
+        jRadioButton1.setText("No correction");
         jRadioButton1.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 jRadioButton1ActionPerformed(evt);
@@ -234,10 +236,10 @@ public class ChaosGameRepresentationUI extends javax.swing.JFrame {
         });
 
         buttonGroup1.add(jRadioButton2);
-        jRadioButton2.setText("Ordre 0");
+        jRadioButton2.setText("Order 0");
 
         buttonGroup1.add(jRadioButton3);
-        jRadioButton3.setText("Ordre 1");
+        jRadioButton3.setText("1st-Order");
 
         javax.swing.GroupLayout jPanel2Layout = new javax.swing.GroupLayout(jPanel2);
         jPanel2.setLayout(jPanel2Layout);
@@ -262,7 +264,7 @@ public class ChaosGameRepresentationUI extends javax.swing.JFrame {
                 .addComponent(jRadioButton3))
         );
 
-        jButton1.setText("Actualiser");
+        jButton1.setText("Apply");
         jButton1.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 jButton1ActionPerformed(evt);
@@ -274,22 +276,20 @@ public class ChaosGameRepresentationUI extends javax.swing.JFrame {
         jPanel1Layout.setHorizontalGroup(
             jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(jPanel1Layout.createSequentialGroup()
-                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
-                        .addComponent(jPanel2, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addGroup(jPanel1Layout.createSequentialGroup()
-                                .addGap(75, 75, 75)
-                                .addComponent(jLabel1)
-                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                                .addComponent(jTextField1, javax.swing.GroupLayout.PREFERRED_SIZE, 26, javax.swing.GroupLayout.PREFERRED_SIZE))
-                            .addGroup(jPanel1Layout.createSequentialGroup()
-                                .addGap(22, 22, 22)
-                                .addComponent(jSlider1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))))
-                    .addGroup(jPanel1Layout.createSequentialGroup()
-                        .addGap(70, 70, 70)
-                        .addComponent(jButton1)))
-                .addContainerGap(38, Short.MAX_VALUE))
+                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
+                    .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                        .addGroup(jPanel1Layout.createSequentialGroup()
+                            .addGap(75, 75, 75)
+                            .addComponent(jLabel1)
+                            .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                            .addComponent(jTextField1, javax.swing.GroupLayout.PREFERRED_SIZE, 26, javax.swing.GroupLayout.PREFERRED_SIZE))
+                        .addGroup(jPanel1Layout.createSequentialGroup()
+                            .addGap(22, 22, 22)
+                            .addComponent(jSlider1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                    .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                        .addComponent(jButton1, javax.swing.GroupLayout.PREFERRED_SIZE, 86, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addComponent(jPanel2, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                .addContainerGap(44, Short.MAX_VALUE))
         );
         jPanel1Layout.setVerticalGroup(
             jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -312,7 +312,7 @@ public class ChaosGameRepresentationUI extends javax.swing.JFrame {
         jMenu1.setText("File");
 
         Open.setAccelerator(javax.swing.KeyStroke.getKeyStroke(java.awt.event.KeyEvent.VK_O, java.awt.event.InputEvent.CTRL_MASK));
-        Open.setText("Ouvrir");
+        Open.setText("Load sequence");
         Open.setToolTipText("");
         Open.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -322,7 +322,7 @@ public class ChaosGameRepresentationUI extends javax.swing.JFrame {
         jMenu1.add(Open);
 
         jMenuItem2.setAccelerator(javax.swing.KeyStroke.getKeyStroke(java.awt.event.KeyEvent.VK_S, java.awt.event.InputEvent.CTRL_MASK));
-        jMenuItem2.setText("Sauvegarder l'image");
+        jMenuItem2.setText("Save picture");
         jMenuItem2.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 jMenuItem2ActionPerformed(evt);
@@ -331,7 +331,7 @@ public class ChaosGameRepresentationUI extends javax.swing.JFrame {
         jMenu1.add(jMenuItem2);
 
         Exit.setAccelerator(javax.swing.KeyStroke.getKeyStroke(java.awt.event.KeyEvent.VK_Q, java.awt.event.InputEvent.CTRL_MASK));
-        Exit.setText("Quitter");
+        Exit.setText("Exit");
         Exit.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 ExitActionPerformed(evt);
@@ -344,7 +344,7 @@ public class ChaosGameRepresentationUI extends javax.swing.JFrame {
         jMenu2.setText("Edit");
 
         jMenuItem1.setAccelerator(javax.swing.KeyStroke.getKeyStroke(java.awt.event.KeyEvent.VK_A, java.awt.event.InputEvent.CTRL_MASK));
-        jMenuItem1.setText("Ajouter une séquence");
+        jMenuItem1.setText("Add sequence");
         jMenuItem1.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 jMenuItem1ActionPerformed(evt);
@@ -380,7 +380,7 @@ public class ChaosGameRepresentationUI extends javax.swing.JFrame {
                 .addComponent(jScrollPane2, javax.swing.GroupLayout.PREFERRED_SIZE, 342, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, 199, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addContainerGap())
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
 
         bindingGroup.bind();
@@ -398,9 +398,9 @@ public class ChaosGameRepresentationUI extends javax.swing.JFrame {
                 fp.readData();
                picturePanel1.maxLabel=jLabel6;
                picturePanel1.minLabel=jLabel7;
-                jLabel2.setText("Séquence:"+Data.entete);
+                jLabel2.setText("Sequence:"+Data.entete);
                 Integer size = Data.sequence.length();
-                jLabel5.setText("Taille:"+size.toString());
+                jLabel5.setText("Size:"+size.toString());
              Data.gradient = gradientPanel1.getImage();
                  repaint();
                 
@@ -433,7 +433,7 @@ public class ChaosGameRepresentationUI extends javax.swing.JFrame {
     private void jButton2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton2ActionPerformed
         // TODO add your handling code here:
         
-         Color col = JColorChooser.showDialog(new javax.swing.JPanel(), "choisir une couleur", Color.yellow);
+         Color col = JColorChooser.showDialog(new javax.swing.JPanel(), "Change color", Color.yellow);
          
         if (col!=null){
             Data.color=col;
@@ -448,9 +448,9 @@ public class ChaosGameRepresentationUI extends javax.swing.JFrame {
         // TODO add your handling code here:
         Data.rank=jSlider1.getValue();
         if (jRadioButton1.isSelected()) {Data.markov=0;}
-        if (jRadioButton2.isSelected()) {Data.markov=1;jLabel4.setText("Correction: Rang 0");}
-        if (jRadioButton3.isSelected()) {Data.markov=2;jLabel4.setText("Correction: Rang 1");}
-        jLabel3.setText("Rang:"+Data.rank);
+        if (jRadioButton2.isSelected()) {Data.markov=1;jLabel4.setText("Correction: Order 0");}
+        if (jRadioButton3.isSelected()) {Data.markov=2;jLabel4.setText("Correction: 1st Order");}
+        jLabel3.setText("Rank:"+Data.rank);
         repaint();
        
         
@@ -471,7 +471,7 @@ public class ChaosGameRepresentationUI extends javax.swing.JFrame {
                 Data.sequence= newseq;
                 
                 Integer size = Data.sequence.length();
-                jLabel5.setText("Taille:"+size.toString());
+                jLabel5.setText("Size:"+size.toString());
                 repaint();
                 
 
