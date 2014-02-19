@@ -1,9 +1,12 @@
-Pour executer le programme: lancez "runCGR.jar"
+This program takes DNA sequence files(fasta format) as input and gives a visual representation of genomic signatures.
 
-Prérequis:
+Reference article:
+- http://nar.oxfordjournals.org/content/18/8/2163.abstract
+
+Requires:
 -JRE 1.7
--Résolution d'écran minimum: 1280*1024
+-minimum screen resolution: 1280*1024
 
-Problèmes connus:
--Image noire si application de la correction de Markov rang 1 sur une séquence contenant d'autres caractères que A,T,G,C.
--Les coordonées (0,0) sont en haut à gauche et non en bas à gauche: en tenir compte pour interprêter l'image.
+Known issues:
+-Black picture if Markov correction is applied on a sequence containing undetermined bases (N).
+-Coordinates (0,0) are top left, take it into consideration.
