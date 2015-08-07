@@ -10,3 +10,14 @@ Requires:
 Known issues:
 -Black picture if Markov correction is applied on a sequence containing undetermined bases (N).
 -Coordinates (0,0) are top left, take it into consideration.
+
+Install:
+
+git clone https://github.com/gdavidson/genome_CGR.git
+
+Run:
+
+Go into the /dist folder and type:
+java -jar runCGR.jar 
+
+
